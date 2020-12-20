@@ -2,17 +2,18 @@
 module.exports = {
     name: 'juo',
     description: 'You can drinks something with this.',
+    aliases: ['TTÄÄÄÄÄ'],
     execute(message, args, client, db) {
 
     
       // Switch
         switch(args[0]) {
 
-              // Viski
+            // Viski
             case 'viskiä':
               
             if(db.get(message.author.id + '_porvari')){
-                message.channel.send('Juot viskiä!')
+                message.channel.send('Juot viskiä! ' + client.emojis.cache.find(emoji => emoji.name === "viskilla").toString())
                 return;
             }
 
@@ -20,21 +21,21 @@ module.exports = {
             
               break;
 
-              // Viini
+            // Viini
             case 'viiniä':
               
             message.channel.send('Juot viiniä!')
            
               break;
 
-                // Vodka
+              // Vodka
               case 'vodkaa':
               
                 message.channel.send('Juot vodkaa!')
                
                   break;
 
-                  // Error
+            // Error
             default:
               message.channel.send('Tuo ei ole juoma!')
               return;
