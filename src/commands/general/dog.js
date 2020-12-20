@@ -9,7 +9,9 @@ module.exports = {
     async execute(message, args, client, db) {
     
     // Main
-    let body = await bent("GET", 200, "json", {"x-api-key": "sensored"})("https://api.thedogapi.com/v1/images/search")
+    client.config = require('../../config.json');
+    let body = await bent("GET", 200, "json", {"x-api-key": client.config.animalapi})("https://api.thedogapi.com/v1/images/search")
+
 
     // Embed
         const Dog = new MessageEmbed()
