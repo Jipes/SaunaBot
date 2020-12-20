@@ -22,11 +22,24 @@ fs.readdir('./handlers/', (err, files) => {
 
     })
 
-    // Shut Down
-    process.on( 'SIGINT', function() {
-    console.log(chalk.greenBright('\nShutting down.'))
-    client.destroy()
-    process.exit()
+})
+    
+process.on("uncaughtException", (err) => {
+    const errorMsg = err.stack.replace(new RegExp(`${__dirname}/`, "g"), "./");
+    console.error(chalk.red(errorMsg));
+    console.error(chalk.red(err));
+});
+    
+process.on("unhandledRejection", err => {
+    console.error(chalk.red(err));
+});
+
+
+// Shut Down
+process.on( 'SIGINT', function() {
+console.log(chalk.greenBright('\nShutting down.'))
+client.destroy()
+process.exit()
 });
 
 // Login
@@ -34,4 +47,3 @@ client.login(client.config.token);
 
 // Export
 exports.client = client;
-})
