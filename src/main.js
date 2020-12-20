@@ -24,13 +24,13 @@ fs.readdir('./handlers/', (err, files) => {
 
 })
     
-process.on("uncaughtException", (err) => {
-    const errorMsg = err.stack.replace(new RegExp(`${__dirname}/`, "g"), "./");
+process.on('uncaughtException', (err) => {
+    const errorMsg = err.stack.replace(new RegExp(`${__dirname}/`, 'g'), './');
     console.error(chalk.red(errorMsg));
     console.error(chalk.red(err));
 });
     
-process.on("unhandledRejection", err => {
+process.on('unhandledRejection', err => {
     console.error(chalk.red(err));
 });
 
