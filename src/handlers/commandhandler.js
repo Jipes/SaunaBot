@@ -29,14 +29,14 @@ exports.run = async (client) => {
         });
     }
     // Categories
-    var command_categories = {
+    let command_categories = {
         general: 'general',
         sauna: 'sauna'
     }
 
     // Loader2
-    for (var command in command_categories) {
-        var value = command_categories[command];
+    for (let command in command_categories) {
+        let value = command_categories[command];
         load_command_from_directory(value)
     }
 
