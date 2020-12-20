@@ -5,8 +5,8 @@ module.exports = {
     execute(message, args, client, db) {
     
         // Main
-        db.set(message.mentions.users.first() + '_porvari', 'true')
-        message.channel.send('Rikastutettiin ' +message.mentions.users.first() + '!')
+        db.set(message.mentions.users.first() + '_porvari', true)
+        message.channel.send('Rikastutettiin ' + message.mentions.users.first() + '!')
         
     }
 }
