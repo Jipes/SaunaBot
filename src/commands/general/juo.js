@@ -2,7 +2,6 @@
 module.exports = {
     name: 'juo',
     description: 'You can drinks something with this.',
-    aliases: ['TTÄÄÄÄÄ'],
     execute(message, args, client, db) {
 
     
