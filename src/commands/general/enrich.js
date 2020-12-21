@@ -1,11 +1,11 @@
 // Export
 module.exports = {
-    name: 'rikastuta',
-    description: 'Tekee käyttäjästä rikkaan.',
+    name: 'enrich',
+    description: 'Makes user rich.',
     execute(message, args, client, db) {
     
         // Check
-        if (!args[0]) return message.channel.send('Mainitse joku!');
+        if (!args[0]) return message.channel.send('Mention someone!');
 
         // Let
         let name = args[0]?.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -16,13 +16,13 @@ module.exports = {
         if (Array.isArray(user)) user = message.guild.members.cache.get(user[1]);
 
         // Check
-        if(!user) return message.channel.send('Ei löydetty käyttäjää.');
+        if(!user) return message.channel.send('No user found.');
 
         // Set
-        db.set(user + '_porvari', true)
+        db.set(user + '_merchant', true)
 
         // Message
-        message.channel.send(user.user.tag + ' on nyt rikas!')
+        message.channel.send(user.user.tag + ' is now rich!')
         
     }
 }
