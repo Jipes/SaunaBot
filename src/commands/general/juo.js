@@ -1,7 +1,7 @@
 // Export
 module.exports = {
     name: 'juo',
-    description: 'You can drinks something with this.',
+    description: 'Pystyt juomaan eri juomia!',
     execute(message, args, client, db) {
 
     
