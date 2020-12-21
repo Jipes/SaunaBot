@@ -7,3 +7,4 @@ ToDo:
 - Make some sort of sauna image
 - Clear code and add embed author
 - Add those damn colors to embeds
+- Make !stats
