@@ -1,8 +1,8 @@
 // Modules
-const config = require("./../config.json");
+const config = require('./../config.json');
 const chalk = require('chalk');
-const enmap = require("enmap")
-const db = new enmap({ name: "database"})
+const enmap = require('enmap')
+const db = new enmap({ name: 'database'})
 
 
 // Export
@@ -23,7 +23,7 @@ module.exports = async (client, message) => {
 
     // Check
     if (!cmd) {
-    message.channel.send("That's not a command!")
+    message.channel.send('That´s not a command!')
     return
     };
 
