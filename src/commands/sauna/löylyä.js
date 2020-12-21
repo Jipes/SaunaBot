@@ -1,7 +1,7 @@
 // Export
 module.exports = {
     name: 'löylyä',
-    description: 'Throws water to hot sauna stove.',
+    description: 'Heittää vettä kiukaalle.',
     async execute(message, args, client, db) {
 
         // Cooldown1

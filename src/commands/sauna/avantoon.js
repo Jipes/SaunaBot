@@ -1,7 +1,7 @@
 // Export
 module.exports = {
     name: 'avantoon',
-    description: 'Gets you to hole in ice.',
+    description: 'Liikuttaa sinut avaantoon.',
     async execute(mmessage, args, client, db) {
     
         // Check

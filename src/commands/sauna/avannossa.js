@@ -1,7 +1,7 @@
 // Export
 module.exports = {
     name: 'avannossa',
-    description: 'Shows list of everyone in hole in ice.',
+    description: 'Näyttää kaikki käyttäjät avannossa.',
     execute(message, args, client, db) {
     
         // Main

@@ -1,7 +1,7 @@
 // Export
 module.exports = {
     name: 'saunassa',
-    description: 'Shows list of everyone in sauna.',
+    description: 'Näyttää kaikki käyttäjät saunassa.',
     execute(message, args, client, db) {
     
         // Main

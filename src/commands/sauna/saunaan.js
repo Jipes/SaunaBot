@@ -1,7 +1,7 @@
 // Export
 module.exports = {
     name: 'saunaan',
-    description: 'Gets you to sauna.',
+    description: 'Liikuttaa sinut saunaan.',
     execute(message, args, client, db) {
     
         // Check
