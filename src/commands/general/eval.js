@@ -35,6 +35,7 @@ module.exports = {
                 .setTitle('Success!')
                 .addField('Output:', `\`\`\`JavaScript\n${evaled}\n\`\`\``)
                 .addField('Evaled in:', `${evalDiff[0] > 0 ? `${evalDiff[0]}s` : ''}${evalDiff[1] / 1000000}ms.`)
+                .setFooter('Requested by ' + message.author.tag)
                 .setTimestamp()
             message.channel.send(evalSuccessEmbed)
 
@@ -44,6 +45,7 @@ module.exports = {
                 .setColor('#f93a2f')
                 .setTitle('Error!')
                 .addField('Output:', `\`\`\`JavaScript\n${clean(err)}\n\`\`\``)
+                .setFooter('Requested by ' + message.author.tag)
                 .setTimestamp()
             message.channel.send(evalFailEmbed)
         

@@ -21,8 +21,7 @@ exports.run = async (client) => {
             const event = require(`../events/${file}`);
             let eventName = file.split('.')[0];
             client.on(eventName, event.bind(null, client));
-            console.log(chalk.yellowBright('Successfully loaded: Event |', eventName))
-     
+            console.log(chalk.yellowBright('Successfully loaded: Event |', eventName))  
         });
     });
 };
