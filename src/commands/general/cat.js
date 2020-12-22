@@ -20,6 +20,7 @@ module.exports = {
         .setTitle('Cat!')
         .setDescription('Aww cute...')
         .setImage(body[0].url)
+        .setFooter('Requested by ' + message.author.tag)
         .setTimestamp();
 
         message.channel.send(Cat)

@@ -8,14 +8,6 @@ exports.run = async (client) => {
     // Log
     console.log(chalk.white('------------------------------------------------------------'))
 
-    // Const
-    const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
-    // Mapper
-    for (const file of commandFiles) {
-        const command = require(`./commands/${file}`);
-    }
-
     // Loader1
     async function load_command_from_directory(command_category) {
         fs.readdir(`./commands/${command_category}`, (err, files) => {
@@ -28,6 +20,7 @@ exports.run = async (client) => {
             });
         });
     }
+    
     // Categories
     let command_categories = {
         general: 'general',
@@ -39,7 +32,5 @@ exports.run = async (client) => {
         let value = command_categories[command];
         load_command_from_directory(value)
     }
-
-
-
 }
+
